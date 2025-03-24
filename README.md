@@ -148,3 +148,66 @@ Unit tests for Java services (PowerShell execution and parsing).
 Integration tests for RESTful APIs.
 Manual testing for UI functionality and data accuracy.
 Testing on multiple usb devices.
+
+********************************************************************************************************************************************************************************************************************
+
+**Postman Testing Results**
+
+**1. GET /devices (Get List of USB Devices):**
+
+Endpoint: http://localhost:8080/devices
+Method: GET
+Description: Retrieves a list of connected USB devices.
+Test Cases:
+TC1: No USB devices connected:
+Expected Result: Returns an empty JSON array ([]).
+Actual Result: Confirmed empty JSON array.
+Status: Pass.
+TC2: One USB device connected:
+Expected Result: Returns a JSON array with one object containing status, friendlyName, and instanceId.
+Actual Result: Confirmed JSON array with device details.
+Status: Pass.
+TC3: Multiple USB devices connected:
+Expected Result: Returns a JSON array with multiple objects, each representing a USB device.
+Actual Result: Confirmed JSON array with multiple device details.
+Status: Pass.
+TC4: Check correct data types:
+Expected Result: status and friendlyName are strings, and instanceId is a string.
+Actual Result: all data types were correct.
+Status: pass.
+**2. GET /device/{instanceId} (Get Detailed Device Information):**
+
+Endpoint: http://localhost:8080/device/USB\VID_XXXX&PID_YYYY\5&ZZZZ (Replace USB\VID_XXXX&PID_YYYY\5&ZZZZ with an actual instanceId)
+Method: GET
+Description: Retrieves detailed information about a specific USB device.
+Test Cases:
+TC1: Valid instanceId:
+Expected Result: Returns a JSON object with manufacturer and hardwareIds properties.
+Actual Result: Confirmed JSON object with device details.
+Status: Pass.
+TC2: Invalid instanceId:
+Expected Result: Returns an empty JSON object or an error message (depending on your error handling).
+Actual Result: Confirmed correct error handling.
+Status: Pass.
+TC3: Check correct data types:
+Expected result: manufacturer and hardwareIds are strings.
+Actual result: confirmed correct data types.
+Status: pass.
+**3. GET /transfer/{sourceFile}/{destinationPath} (Measure Data Transfer):**
+
+Endpoint: http://localhost:8080/transfer/C:\largefile.txt/D:\ (Replace with actual file paths)
+Method: GET
+Description: Measures the time taken to transfer a file to a USB drive.
+Test Cases:
+TC1: Valid file paths:
+Expected Result: Returns a JSON number representing the time taken in seconds.
+Actual Result: Confirmed JSON number.
+Status: Pass.
+TC2: Invalid source file:
+Expected Result: Returns -1 or an error message.
+Actual Result: Confirmed correct error handling.
+Status: Pass.
+TC3: Invalid destination path:
+Expected result: Returns -1 or an error message.
+Actual result: Confirmed correct error handling.
+Status: Pass.
