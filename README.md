@@ -175,6 +175,7 @@ TC4: Check correct data types:
 Expected Result: status and friendlyName are strings, and instanceId is a string.
 Actual Result: all data types were correct.
 Status: pass.
+
 **2. GET /device/{instanceId} (Get Detailed Device Information):**
 
 Endpoint: http://localhost:8080/device/USB\VID_XXXX&PID_YYYY\5&ZZZZ (Replace USB\VID_XXXX&PID_YYYY\5&ZZZZ with an actual instanceId)
@@ -193,6 +194,7 @@ TC3: Check correct data types:
 Expected result: manufacturer and hardwareIds are strings.
 Actual result: confirmed correct data types.
 Status: pass.
+
 **3. GET /transfer/{sourceFile}/{destinationPath} (Measure Data Transfer):**
 
 Endpoint: http://localhost:8080/transfer/C:\largefile.txt/D:\ (Replace with actual file paths)
