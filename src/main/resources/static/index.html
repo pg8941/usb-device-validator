@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>USB Device Validation</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        #jsonView {
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <h1>Connected USB Devices</h1>
+    <label><input type="checkbox" id="prettyPrint"> Pretty Print</label>
+    <button id="updateButton">Update</button>
+    <div id="deviceList"></div>
+    <pre id="jsonView" style="display: none;"></pre>
+    <script src="script.js"></script>
+</body>
+</html>
