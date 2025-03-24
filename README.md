@@ -4,8 +4,7 @@
 
 **1. Introduction:**
 
-This report details the development and implementation of the "USB Device Validation System," a Spring Boot application designed to provide a user-friendly interface for inspecting and testing connected USB devices on a Windows platform. As a member of the Samsung USB Framework Team, I aimed to create a tool that simplifies the process of device validation and troubleshooting, enhancing efficiency and accuracy.
-
+This report details the development and implementation of the "USB Device Validation System," a Spring Boot application designed to provide a user-friendly interface for inspecting and testing connected USB devices on a Windows platform.
 **2. Why Needed:**
 
 In the realm of USB device development and testing, particularly within a large ecosystem like Samsung's, the need for a reliable and accessible tool to analyze connected devices is paramount. Current methods often involve complex command-line utilities or require specialized hardware. This project addresses the need for a simplified, web-based solution that:
